@@ -207,17 +207,17 @@ export default function Hero() {
 
             {/* Bio */}
             <p className="hero-bio text-[0.875rem] leading-[1.9] max-w-sm font-light"
-               style={{ color: 'rgba(255,255,255,0.3)' }}>
+               style={{ color: 'text-white' }}>
               Building thoughtful applications from backend to frontend —
               with a growing passion for{' '}
-              <span style={{ color: 'rgba(192,132,252,0.75)' }}>Generative AI</span>
+              <span style={{ color: 'text-white' }}>Generative AI</span>
               {' '}and clean, purposeful code.
             </p>
 
             {/* Colourful stat chips */}
             <div className="flex flex-wrap gap-3 hero-bio">
               {[
-                { label: '2nd Year', sub: 'CS Student',     color: 'rgba(129,140,248,0.12)', border: 'rgba(129,140,248,0.25)', text: 'rgba(165,180,252,0.85)' },
+                { label: '2nd Year', sub: 'IDD Student',     color: 'rgba(129,140,248,0.12)', border: 'rgba(129,140,248,0.25)', text: 'rgba(165,180,252,0.85)' },
                 { label: 'MERN',     sub: 'Stack',          color: 'rgba(34,211,238,0.08)',  border: 'rgba(34,211,238,0.2)',   text: 'rgba(103,232,249,0.8)'  },
                 { label: 'GenAI',    sub: 'Enthusiast',     color: 'rgba(251,146,60,0.08)',  border: 'rgba(251,146,60,0.2)',   text: 'rgba(253,186,116,0.8)'  },
               ].map(({ label, sub, color, border, text }) => (
@@ -251,21 +251,7 @@ export default function Hero() {
             </div>
 
             {/* Socials */}
-            <div className="flex gap-6 pt-1 hero-socials">
-              {[
-                { label: 'GitHub',   color: 'rgba(165,180,252,0.6)' },
-                { label: 'LinkedIn', color: 'rgba(103,232,249,0.6)' },
-                { label: 'Resume',   color: 'rgba(253,186,116,0.6)' },
-              ].map(({ label, color }) => (
-                <a key={label} href="#"
-                   className="social-link text-[9px] tracking-[0.16em] uppercase font-medium transition-colors duration-200"
-                   style={{ color: 'rgba(255,255,255,0.2)' }}
-                   onMouseEnter={e => e.currentTarget.style.color = color}
-                   onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.2)'}>
-                  {label}
-                </a>
-              ))}
-            </div>
+            
           </div>
 
           {/* ══ RIGHT — photo frame ══ */}

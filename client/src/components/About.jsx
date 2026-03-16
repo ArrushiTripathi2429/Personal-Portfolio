@@ -206,7 +206,7 @@ export default function About() {
               </h2>
 
               <p className="reveal text-sm font-light leading-[1.95]"
-                 style={{ color: 'rgba(255,255,255,0.3)', transitionDelay: '0.1s', maxWidth: 400 }}>
+                 style={{ color: 'text-white', transitionDelay: '0.1s', maxWidth: 400 }}>
                 I'm a second-year CS + AI student who enjoys building things
                 end-to-end — from designing APIs to writing clean React UIs.
                 I care about code that's readable, products that feel intentional,
@@ -214,9 +214,9 @@ export default function About() {
               </p>
 
               <p className="reveal text-sm font-light leading-[1.95]"
-                 style={{ color: 'rgba(255,255,255,0.3)', transitionDelay: '0.15s', maxWidth: 400 }}>
+                 style={{ color: 'text-white', transitionDelay: '0.15s', maxWidth: 400 }}>
                 Right now I'm diving deep into{' '}
-                <span style={{ color: 'rgba(192,132,252,0.75)' }}>Generative AI</span>
+                <span style={{ color: 'text-white' }}>Generative AI</span>
                 {' '}— how LLMs can be woven into real products. I work across
                 Java, Python, and JavaScript depending on what the problem needs.
               </p>

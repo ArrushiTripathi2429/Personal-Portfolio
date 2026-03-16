@@ -14,7 +14,7 @@ export default function Contact() {
   }, [])
 
   const copy = () => {
-    navigator.clipboard.writeText('arrushi111@email.com')
+    navigator.clipboard.writeText('arrushi111@gmail.com')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -22,21 +22,21 @@ export default function Contact() {
   const socials = [
     {
       label: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/arushi-tripathi-80703031a',
       color: 'rgba(103,232,249,0.7)',
       bg: 'rgba(34,211,238,0.07)',
       border: 'rgba(34,211,238,0.18)',
     },
     {
       label: 'GitHub',
-      href: '#',
+      href: 'https://github.com/ArrushiTripathi2429',
       color: 'rgba(165,180,252,0.7)',
       bg: 'rgba(129,140,248,0.07)',
       border: 'rgba(129,140,248,0.18)',
     },
     {
       label: 'Resume',
-      href: '#',
+      href: '/resume.pdf',
       color: 'rgba(253,186,116,0.75)',
       bg: 'rgba(251,146,60,0.07)',
       border: 'rgba(251,146,60,0.18)',
@@ -84,7 +84,6 @@ export default function Contact() {
           background: rgba(192,132,252,0.35);
         }
 
-        /* Email button */
         .email-btn {
           display: flex;
           align-items: center;
@@ -140,7 +139,6 @@ export default function Contact() {
           transition: all 0.2s ease;
         }
 
-        /* Social cards */
         .social-card {
           padding: 14px 20px;
           border-radius: 14px;
@@ -166,7 +164,6 @@ export default function Contact() {
         }
         .social-card:hover .social-arrow { opacity: 1; transform: translate(2px, -2px); }
 
-        /* Footer */
         .footer-bar {
           font-family: 'DM Mono', monospace;
           font-size: 10px;
@@ -175,7 +172,6 @@ export default function Contact() {
           font-weight: 300;
         }
 
-        /* Availability pill */
         .avail-pill {
           display: inline-flex;
           align-items: center;
@@ -206,24 +202,20 @@ export default function Contact() {
 
       <section id="contact" ref={ref} className="relative py-32">
 
-        {/* bg glows */}
         <div className="absolute pointer-events-none" style={{ bottom: '0%', left: '50%', transform: 'translateX(-50%)', width: 400, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(192,132,252,0.05) 0%, transparent 70%)' }} />
         <div className="absolute pointer-events-none" style={{ top: '10%', right: '8%', width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(34,211,238,0.04) 0%, transparent 70%)' }} />
 
         <div className="max-w-5xl px-6 mx-auto">
 
-          {/* Eyebrow */}
           <div className="mb-10 reveal">
             <span className="section-eyebrow">Get in touch</span>
           </div>
 
-          {/* Heading */}
           <h2 className="mb-4 contact-heading reveal" style={{ transitionDelay: '0.05s' }}>
             Let's build something<br />
             <em>great together.</em>
           </h2>
 
-          {/* Availability pill */}
           <div className="mb-10 reveal" style={{ transitionDelay: '0.08s' }}>
             <span className="avail-pill">
               <span className="avail-dot" />
@@ -232,12 +224,11 @@ export default function Contact() {
           </div>
 
           <p className="reveal text-sm leading-[1.95] font-light mb-12"
-             style={{ color: 'rgba(255,255,255,0.28)', maxWidth: 460, transitionDelay: '0.1s' }}>
+             style={{ color: 'text-white', maxWidth: 460, transitionDelay: '0.1s' }}>
             I'm actively looking for internship opportunities in full-stack development
             or AI engineering. If you have something in mind, I'd genuinely love to hear from you.
           </p>
 
-          {/* Email copy button */}
           <div className="mb-6 reveal" style={{ transitionDelay: '0.14s' }}>
             <button className="email-btn" onClick={copy}>
               <div className="email-icon">
@@ -260,21 +251,37 @@ export default function Contact() {
 
           {/* Social cards */}
           <div className="grid max-w-md grid-cols-3 gap-3 reveal" style={{ transitionDelay: '0.18s' }}>
-            {socials.map(({ label, href, color, bg, border }) => (
-              <a
-                key={label}
-                href={href}
-                className="social-card"
-                style={{ background: bg, border: `1px solid ${border}` }}
-              >
-                <span className="social-label" style={{ color }}>{label}</span>
-                <svg className="social-arrow" width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color }}>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </a>
-            ))}
-          </div>
+           {socials.map(({ label, href, color, bg, border }) => (
+  <a
+    key={label}
+    href={href}
+    className="social-card"
+    style={{ background: bg, border: `1px solid ${border}` }}
+    target="_blank"
+    rel="noopener noreferrer"
+    
+  >
+    <span className="social-label" style={{ color }}>{label}</span>
+    <svg
+      className="social-arrow"
+      width="10"
+      height="10"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      style={{ color }}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M7 17L17 7M17 7H7M17 7v10"
+      />
+    </svg>
+  </a>
+))}
 
+        </div>
         </div>
 
         {/* Footer */}

@@ -4,6 +4,7 @@ import Saundarya2 from '../assets/Saundarya2.png';
 import Saundarya3 from '../assets/Saundarya3.png';
 import PitchPerfect1 from '../assets/PitchPerfect1.png';
 import PitchPerfect2 from '../assets/PitchPerfect2.png';
+import PitchPerfect3 from '../assets/PitchPerfect3.png';
 
 
 
@@ -13,7 +14,7 @@ const projects = [
     title: "Saundarya AI",
     category: "GenAI · Full Stack",
     description:
-      "Conversational AI app with LLM integration, context memory, and streaming responses built on Next.js.",
+     "Full-stack AI skincare assistant that analyzes user skin profiles and generates personalized routines using GenAI-powered recommendations",
     stack: ["Next.js", "Python", "FastAPI", "PostgreSQL", "Prisma ORM"],
     images: [
    Saundarya1, Saundarya2, Saundarya3
@@ -23,7 +24,7 @@ const projects = [
     color: {
       bg: "rgba(251,146,60,0.06)",
       border: "rgba(251,146,60,0.16)",
-      accent: "rgba(253,186,116,0.8)",
+      accent: "text-white",
       dot: "#fb923c",
       numColor: "rgba(251,146,60,0.35)",
       chipBg: "rgba(251,146,60,0.08)",
@@ -36,18 +37,18 @@ const projects = [
     title: "Pitch Perfect AI",
     category: "MERN Stack · GenAI",
     description:
-      "Full-featured app with JWT auth, cart management, Stripe payments and an admin dashboard.",
+      "Multimodal AI presentation trainer that evaluates speech clarity, body language, and facial cues to improve public speaking performance",
     stack: ["React.js", "Node.js", "MongoDB", "Express", "FaceApi, Mediapipe"],
     images: [
-     PitchPerfect1, PitchPerfect2
+     PitchPerfect1, PitchPerfect2 , PitchPerfect3
     ],
     link: "#",
     github: "#",
     color: {
       bg: "rgba(192,132,252,0.06)",
       border: "rgba(192,132,252,0.16)",
-      accent: "rgba(216,180,254,0.8)",
-      dot: "#c084fc",
+      accent: "text-white",
+      dot: "text-white",
       numColor: "rgba(192,132,252,0.3)",
       chipBg: "rgba(192,132,252,0.08)",
       chipBorder: "rgba(192,132,252,0.18)",
@@ -56,13 +57,11 @@ const projects = [
   },
 ];
 
-/* ─────────────────────────────────────────
-   Per-card image carousel
-───────────────────────────────────────── */
+
 function ProjectCarousel({ images, color, title }) {
   const [idx, setIdx] = useState(0);
   const [sliding, setSliding] = useState(false);
-  const [slideDir, setSlideDir] = useState(null); // 'next' | 'prev'
+  const [slideDir, setSlideDir] = useState(null); 
   const [displayIdx, setDisplayIdx] = useState(0);
   const total = images.length;
 
@@ -94,7 +93,7 @@ function ProjectCarousel({ images, color, title }) {
     }, 350);
   };
 
-  // Build CSS class for current slide
+  
   const slideClass = sliding
     ? slideDir === "next"
       ? "slide-exit-left"
@@ -188,9 +187,7 @@ function ProjectCarousel({ images, color, title }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   Main section
-───────────────────────────────────────── */
+
 export default function Projects() {
   const ref = useRef(null);
 
