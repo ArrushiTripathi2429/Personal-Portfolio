@@ -19,8 +19,8 @@ const projects = [
     images: [
    Saundarya1, Saundarya2, Saundarya3
     ],
-    link: "#",
-    github: "#",
+    link: "https://saundarya-ai-8vys.vercel.app",
+    github: "https://github.com/ArrushiTripathi2429/Saundarya-Ai",
     color: {
       bg: "rgba(251,146,60,0.06)",
       border: "rgba(251,146,60,0.16)",
@@ -42,8 +42,8 @@ const projects = [
     images: [
      PitchPerfect1, PitchPerfect2 , PitchPerfect3
     ],
-    link: "#",
-    github: "#",
+    link: "https://pitchperfectfrontend.vercel.app",
+    github: "https://github.com/ArrushiTripathi2429/PitchPerfect-AI",
     color: {
       bg: "rgba(192,132,252,0.06)",
       border: "rgba(192,132,252,0.16)",
