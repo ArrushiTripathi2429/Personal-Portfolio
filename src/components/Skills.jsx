@@ -5,37 +5,44 @@ const groups = [
     label: "Languages",
     icon: "{ }",
     color: { bg: "rgba(129,140,248,0.08)", border: "rgba(129,140,248,0.2)", accent: "rgba(165,180,252,0.85)", dot: "#818cf8", chipBg: "rgba(129,140,248,0.1)", chipBorder: "rgba(129,140,248,0.22)", chipText: "rgba(165,180,252,0.8)" },
-    items: ["Python", "Java", "JavaScript", "TypeScript", "C++", "SQL"],
+    items: ["Python", "Java", "JavaScript", "SQL"],
   },
   {
     label: "Frontend",
     icon: "◈",
     color: { bg: "rgba(192,132,252,0.08)", border: "rgba(192,132,252,0.2)", accent: "rgba(216,180,254,0.85)", dot: "#c084fc", chipBg: "rgba(192,132,252,0.1)", chipBorder: "rgba(192,132,252,0.22)", chipText: "rgba(216,180,254,0.8)" },
-    items: ["React", "Next.js", "Tailwind", "HTML", "Redux"],
+    items: [ "HTML", "CSS" , "React", "Next.js", "Tailwind", "ShadecnUI"],
   },
   {
     label: "Backend",
     icon: "⌥",
     color: { bg: "rgba(34,211,238,0.07)", border: "rgba(34,211,238,0.18)", accent: "rgba(103,232,249,0.85)", dot: "#22d3ee", chipBg: "rgba(34,211,238,0.08)", chipBorder: "rgba(34,211,238,0.2)", chipText: "rgba(103,232,249,0.8)" },
-    items: ["Node.js", "Express", "Spring Boot", "Flask", "REST APIs"],
+    items: ["Node.js", "Express",  "REST APIs" , "FastAPI"],
   },
   {
     label: "Databases",
     icon: "◉",
     color: { bg: "rgba(52,211,153,0.07)", border: "rgba(52,211,153,0.18)", accent: "rgba(110,231,183,0.85)", dot: "#34d399", chipBg: "rgba(52,211,153,0.08)", chipBorder: "rgba(52,211,153,0.2)", chipText: "rgba(110,231,183,0.8)" },
-    items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
+    items: ["MongoDB", "PostgreSQL", "Prisma ORM"],
   },
   {
-    label: "AI / GenAI",
+    label: "GenAI And Computer Vision",
     icon: "✦",
     color: { bg: "rgba(251,146,60,0.07)", border: "rgba(251,146,60,0.2)", accent: "rgba(253,186,116,0.85)", dot: "#fb923c", chipBg: "rgba(251,146,60,0.09)", chipBorder: "rgba(251,146,60,0.22)", chipText: "rgba(253,186,116,0.85)" },
-    items: ["Generative AI", "LLM Integration", "LangChain", "Prompt Engineering", "TensorFlow", "Scikit-learn"],
+    items: ["Generative AI", "Python based Ai Services", "Mediapipe", "FaceAPI.js"],
+  },
+
+  {
+    label: "Authetication and Services",
+    icon: "✦",
+    color: { bg: "rgba(251,146,60,0.07)", border: "rgba(251,146,60,0.2)", accent: "rgba(253,186,116,0.85)", dot: "#fb923c", chipBg: "rgba(251,146,60,0.09)", chipBorder: "rgba(251,146,60,0.22)", chipText: "rgba(253,186,116,0.85)" },
+    items: ["Clerk", "NextAuth.js", "Resend"],
   },
   {
     label: "Tools",
     icon: "⚙",
     color: { bg: "rgba(244,114,182,0.07)", border: "rgba(244,114,182,0.18)", accent: "rgba(249,168,212,0.85)", dot: "#f472b6", chipBg: "rgba(244,114,182,0.08)", chipBorder: "rgba(244,114,182,0.2)", chipText: "rgba(249,168,212,0.8)" },
-    items: ["Git", "GitHub", "Docker", "Postman", "Linux", "VS Code"],
+    items: ["Git", "GitHub", "Vercel", "Postman", "Render"],
   },
 ];
 

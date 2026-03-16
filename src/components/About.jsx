@@ -254,7 +254,7 @@ export default function About() {
           <div className="reveal currently-strip" style={{ transitionDelay: '0.25s' }}>
             <div className="now-item">
               <div className="now-item-label">Building</div>
-              <div className="now-item-value">A MERN + AI side project</div>
+              <div className="now-item-value">Project on AI security</div>
             </div>
             <div className="now-divider" />
             <div className="now-item">
