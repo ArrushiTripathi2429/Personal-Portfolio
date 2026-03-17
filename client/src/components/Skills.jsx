@@ -29,7 +29,7 @@ const groups = [
     label: "GenAI And Computer Vision",
     icon: "✦",
     color: { bg: "rgba(251,146,60,0.07)", border: "rgba(251,146,60,0.2)", accent: "rgba(253,186,116,0.85)", dot: "#fb923c", chipBg: "rgba(251,146,60,0.09)", chipBorder: "rgba(251,146,60,0.22)", chipText: "rgba(253,186,116,0.85)" },
-    items: ["Generative AI", "Python based Ai Services", "Mediapipe", "FaceAPI.js"],
+    items: ["Generative AI", "Python based AI Services", "Mediapipe", "FaceAPI.js"],
   },
 
   {

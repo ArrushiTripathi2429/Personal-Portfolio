@@ -22,7 +22,7 @@ export default function Contact() {
   const socials = [
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/arushi-tripathi-80703031a',
+      href: 'https://www.linkedin.com/in/arushana',
       color: 'rgba(103,232,249,0.7)',
       bg: 'rgba(34,211,238,0.07)',
       border: 'rgba(34,211,238,0.18)',
@@ -219,14 +219,14 @@ export default function Contact() {
           <div className="mb-10 reveal" style={{ transitionDelay: '0.08s' }}>
             <span className="avail-pill">
               <span className="avail-dot" />
-              Open to internships · Summer 2025
+              Open to internships · Summer 2026
             </span>
           </div>
 
           <p className="reveal text-sm leading-[1.95] font-light mb-12"
              style={{ color: 'text-white', maxWidth: 460, transitionDelay: '0.1s' }}>
             I'm actively looking for internship opportunities in full-stack development
-            or AI engineering. If you have something in mind, I'd genuinely love to hear from you.
+            or AI engineering.
           </p>
 
           <div className="mb-6 reveal" style={{ transitionDelay: '0.14s' }}>
@@ -289,7 +289,7 @@ export default function Contact() {
              style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
           <div className="flex items-center justify-between">
             <p className="footer-bar" style={{ color: 'rgba(255,255,255,0.14)' }}>
-              Arushi Tripathi · 2025
+              Arushi Tripathi · 2026
             </p>
             <p className="footer-bar" style={{ color: 'rgba(255,255,255,0.08)' }}>
               Built with React & Tailwind
