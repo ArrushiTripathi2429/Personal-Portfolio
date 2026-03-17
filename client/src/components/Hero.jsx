@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import profilePic from '../assets/PortfolioPicture.jpeg' // <-- your image
+import profilePic from '../assets/PortfolioPicture.jpeg'
 
 const roles = [
   'Full Stack Developer',
@@ -35,16 +35,16 @@ export default function Hero() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
         @keyframes shimmer {
-          0% { background-position: -200% center; }
-          100% { background-position: 200% center; }
+          0%   { background-position: -200% center; }
+          100% { background-position:  200% center; }
         }
         @keyframes floatUp {
-          0% { opacity: 0; transform: translateY(22px); }
+          0%   { opacity: 0; transform: translateY(22px); }
           100% { opacity: 1; transform: translateY(0); }
         }
         @keyframes borderSpin {
           from { --angle: 0deg; }
-          to { --angle: 360deg; }
+          to   { --angle: 360deg; }
         }
         @property --angle {
           syntax: '<angle>';
@@ -78,19 +78,21 @@ export default function Hero() {
         }
       `}</style>
 
-      <section className="relative flex items-center min-h-screen">
+      <section className="relative flex items-center min-h-screen overflow-hidden">
         <div className="grid items-center w-full max-w-5xl gap-16 px-6 pt-20 mx-auto md:grid-cols-2">
 
           {/* LEFT */}
           <div className="flex flex-col gap-6">
-            <span className="text-xs uppercase text-emerald-400">Open to internships</span>
+            <span className="text-xs uppercase text-emerald-400">
+              Open to internships
+            </span>
 
             <div>
               <div className="hero-name-first">Arushi</div>
               <div className="hero-name-last">Tripathi</div>
             </div>
 
-            <p className="italic text-gray-400">
+            <p className="text-gray-400 italic min-h-[24px]">
               {text}
               <span className="animate-pulse">|</span>
             </p>
@@ -110,26 +112,25 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT — PHOTO */}
+    
           <div className="flex justify-center">
             <div className="relative w-56 h-72">
 
-              {/* frame */}
-              <div className="absolute inset-0 flex items-center justify-center rounded-2xl photo-frame-outer">
+              <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl photo-frame-outer">
 
-                
-               <img
-  src={profilePic}
-  alt="Arushi Tripathi"
-  className="h-56 transition-all duration-300 w-44 rounded-xl hover:scale-105"
-  style={{
-    objectFit: 'cover',
-    objectPosition: 'center top', 
-    transform: 'scale(1.35)',  
-    border: '1px solid rgba(255,255,255,0.1)',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-  }}
-/>
+                <img
+                  src={profilePic}
+                  alt="Arushi Tripathi"
+                  className="w-full h-full rounded-2xl"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center 75%', 
+                    transform: 'scale(1.9)',      
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                  }}
+                />
+
               </div>
             </div>
           </div>
