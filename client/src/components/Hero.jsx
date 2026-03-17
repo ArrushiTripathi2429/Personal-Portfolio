@@ -117,16 +117,19 @@ export default function Hero() {
               {/* frame */}
               <div className="absolute inset-0 flex items-center justify-center rounded-2xl photo-frame-outer">
 
-                {/* YOUR REAL PHOTO */}
-                <img
-                  src={profilePic}
-                  alt="Arushi Tripathi"
-                  className="object-cover h-56 transition-all duration-300 w-44 rounded-xl hover:scale-105"
-                  style={{
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-                  }}
-                />
+                
+               <img
+  src={profilePic}
+  alt="Arushi Tripathi"
+  className="h-56 transition-all duration-300 w-44 rounded-xl hover:scale-105"
+  style={{
+    objectFit: 'cover',
+    objectPosition: 'center top', 
+    transform: 'scale(1.35)',  
+    border: '1px solid rgba(255,255,255,0.1)',
+    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+  }}
+/>
               </div>
             </div>
           </div>
