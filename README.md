@@ -106,6 +106,6 @@ npm run dev
 
 Email: arrushi111@gmail.com
 LinkedIn: www.linkedin.com/in/arushana
-GitHub: https://github.com/ArrushiTripathi2429
+Portfolio: https://arushana.netlify.app/
 
 
