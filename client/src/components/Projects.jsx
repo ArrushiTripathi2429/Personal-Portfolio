@@ -5,7 +5,10 @@ import Saundarya3 from '../assets/Saundarya3.png';
 import PitchPerfect1 from '../assets/PitchPerfect1.png';
 import PitchPerfect2 from '../assets/PitchPerfect2.png';
 import PitchPerfect3 from '../assets/PitchPerfect3.png';
-
+import Sanrakshan1 from '../assets/sanrakshan.png';
+import Sanrakshan2 from '../assets/sanrakshan2.png';
+import Sanrakshan3 from '../assets/sanrakshan3.png';  
+import Sanrakshan4 from '../assets/sanrakshan4.png';
 
 
 const projects = [
@@ -53,6 +56,29 @@ const projects = [
       chipBg: "rgba(192,132,252,0.08)",
       chipBorder: "rgba(192,132,252,0.18)",
       chipText: "rgba(216,180,254,0.7)",
+    },
+  },
+   {
+    number: "03",
+    title: "Sanrakshan",
+    category: "GenAI · Full Stack",
+    description:
+     "Sanrakshan is a real-time relief coordination platform built for Raebareli & Amethi districts",
+    stack: ["Next.js", "Python", "FastAPI", "Firebase", "Firestore"],
+    images: [
+      Sanrakshan1, Sanrakshan2 , Sanrakshan3, Sanrakshan4
+    ],
+    link: "https://sanrakshann.netlify.app",
+    github: "https://github.com/ArrushiTripathi2429/Sanrakshan",
+    color: {
+      bg: "rgba(251,146,60,0.06)",
+      border: "rgba(251,146,60,0.16)",
+      accent: "text-white",
+      dot: "#fb923c",
+      numColor: "rgba(251,146,60,0.35)",
+      chipBg: "rgba(251,146,60,0.08)",
+      chipBorder: "rgba(251,146,60,0.18)",
+      chipText: "rgba(253,186,116,0.7)",
     },
   },
 ];

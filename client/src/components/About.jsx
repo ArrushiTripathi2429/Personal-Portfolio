@@ -264,7 +264,7 @@ export default function About() {
             <div className="now-divider" />
             <div className="now-item">
               <div className="now-item-label">Seeking</div>
-              <div className="now-item-value">Summer Internship 2025</div>
+              <div className="now-item-value">Summer Internship 2026</div>
             </div>
           </div>
 
