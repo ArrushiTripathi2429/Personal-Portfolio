@@ -4,11 +4,13 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-
+import OpenSource from './components/opensource'
+import Achievements from './components/achievements'
+import Certifications from './components/Certifications'
 
 export default function App() {
   return (
-    <div className="noise min-h-screen bg-[#0D0D14]">
+    <div className="noise min-h-screen">
       
       <Navbar />
       <main>
@@ -16,6 +18,9 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <OpenSource />
+        <Certifications />
+        <Achievements />
         <Contact />
       </main>
     </div>

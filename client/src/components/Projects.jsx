@@ -9,11 +9,83 @@ import Sanrakshan1 from '../assets/sanrakshan.png';
 import Sanrakshan2 from '../assets/sanrakshan2.png';
 import Sanrakshan3 from '../assets/sanrakshan3.png';  
 import Sanrakshan4 from '../assets/sanrakshan4.png';
+import Nerve1 from '../assets/nerve1.png';
+import Nerve2 from '../assets/nerve2.png';
+import Nerve3 from '../assets/nerve3.png';
+import KrishiVani1 from '../assets/krishiwani.png';
+import Prism from '../assets/prism1.png';
+import Prism2 from '../assets/prism2.png';
+import Prism3 from '../assets/prism3.png';
 
+// TODO: swap these placeholders for real screenshots once you have them,
+// e.g. import Nerve1 from '../assets/Nerve1.png';
 
 const projects = [
   {
     number: "01",
+    title: "Nerve",
+    category: "Multi-Agent AI · GenAI",
+    description:
+      "Multi-agent D2C financial intelligence engine that detects business signals, runs autonomous research, and streams live alerts — built with Google ADK, BigQuery, and Fivetran",
+    stack: ["Google ADK", "BigQuery", "Fivetran", "Gemini", "FastAPI"],
+    images: [Nerve1, Nerve2, Nerve3],
+    link: "https://github.com/ArrushiTripathi2429/Nerve",
+    github: "https://github.com/ArrushiTripathi2429/Nerve",
+    color: {
+      bg: "rgba(45,212,191,0.06)",
+      border: "rgba(45,212,191,0.16)",
+      accent: "text-white",
+      dot: "#2dd4bf",
+      numColor: "rgba(45,212,191,0.35)",
+      chipBg: "rgba(45,212,191,0.08)",
+      chipBorder: "rgba(45,212,191,0.18)",
+      chipText: "rgba(153,246,228,0.7)",
+    },
+  },
+  {
+    number: "02",
+    title: "KrishiVani",
+    category: "Agentic RAG · GenAI",
+    description:
+      "Cross-lingual agentic RAG assistant for Indian farmers, retrieving answers from 73K+ Kisan Call Centre transcripts using multilingual embeddings and FAISS",
+    stack: ["FAISS", "HuggingFace", "Groq", "FastAPI", "Next.js"],
+    images: [KrishiVani1, null, null],
+    link: "https://github.com/ArrushiTripathi2429/KrishiVani",
+    github: "https://github.com/ArrushiTripathi2429/KrishiVani",
+    color: {
+      bg: "rgba(163,230,53,0.06)",
+      border: "rgba(163,230,53,0.16)",
+      accent: "text-white",
+      dot: "#a3e635",
+      numColor: "rgba(163,230,53,0.35)",
+      chipBg: "rgba(163,230,53,0.08)",
+      chipBorder: "rgba(163,230,53,0.18)",
+      chipText: "rgba(217,249,157,0.7)",
+    },
+  },
+  {
+    number: "03",
+    title: "PRISM",
+    category: "Evidence-Backed AI · Hiring",
+    description:
+      "Multi-layer evidence-backed candidate ranking pipeline built for the Redrob AI Hackathon — processing 100K candidates with rule-based scoring and honeypot detection",
+    stack: ["Python", "Streamlit", "Pandas", "Rule-Based Scoring"],
+    images: [Prism, Prism2, Prism3],
+    link: "https://verity-ranker.streamlit.app/",
+    github: "https://github.com/ArrushiTripathi2429/PRISM",
+    color: {
+      bg: "rgba(244,114,182,0.06)",
+      border: "rgba(244,114,182,0.16)",
+      accent: "text-white",
+      dot: "#f472b6",
+      numColor: "rgba(244,114,182,0.35)",
+      chipBg: "rgba(244,114,182,0.08)",
+      chipBorder: "rgba(244,114,182,0.18)",
+      chipText: "rgba(251,207,232,0.7)",
+    },
+  },
+  {
+    number: "04",
     title: "Saundarya AI",
     category: "GenAI · Full Stack",
     description:
@@ -36,7 +108,7 @@ const projects = [
     },
   },
   {
-    number: "02",
+    number: "05",
     title: "Pitch Perfect AI",
     category: "MERN Stack · GenAI",
     description:
@@ -59,7 +131,7 @@ const projects = [
     },
   },
    {
-    number: "03",
+    number: "06",
     title: "Sanrakshan",
     category: "GenAI · Full Stack",
     description:
@@ -242,13 +314,13 @@ export default function Projects() {
         .projects-heading {
           font-family: 'Playfair Display', Georgia, serif;
           font-size: clamp(2.6rem, 5vw, 4.2rem);
-          font-weight: 700;
-          line-height: 1.06;
-          color: rgba(255,255,255,0.9);
+          font-weight: 600;
+          line-height: 1.1;
+          color: rgba(255,255,255,0.96);
         }
         .projects-heading em {
           font-style: italic;
-          background: linear-gradient(110deg, #c084fc 0%, #818cf8 50%, #38bdf8 100%);
+          background: linear-gradient(110deg, #e2b0ff 0%, #9f8cf8 50%, #5bd2f0 100%);
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -276,11 +348,16 @@ export default function Projects() {
           border-radius: 20px;
           display: flex;
           flex-direction: column;
-          transition: transform 0.3s ease;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
           position: relative;
           overflow: hidden;
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
         }
-        .project-card:hover { transform: translateY(-6px); }
+        .project-card:hover { 
+          transform: translateY(-6px); 
+          box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
         .project-card::before {
           content: '';
           position: absolute;
@@ -494,7 +571,7 @@ export default function Projects() {
         }
       `}</style>
 
-      <section id="projects" ref={ref} className="relative py-32">
+      <section id="projects" ref={ref} className="relative py-20">
 
         {/* Ambient glows */}
         <div className="absolute pointer-events-none" style={{ top: '8%', left: '5%', width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(251,146,60,0.04) 0%, transparent 70%)' }} />
@@ -511,7 +588,7 @@ export default function Projects() {
             <em>built.</em>
           </h2>
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((p, i) => (
               <div
                 key={p.number}

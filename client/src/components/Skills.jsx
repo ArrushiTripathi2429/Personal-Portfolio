@@ -5,45 +5,32 @@ const groups = [
     label: "Languages",
     icon: "{ }",
     color: { bg: "rgba(129,140,248,0.08)", border: "rgba(129,140,248,0.2)", accent: "rgba(165,180,252,0.85)", dot: "#818cf8", chipBg: "rgba(129,140,248,0.1)", chipBorder: "rgba(129,140,248,0.22)", chipText: "rgba(165,180,252,0.8)" },
-    items: ["Python", "Java", "JavaScript", "SQL"],
+    items: ["Java", "JavaScript", "TypeScript", "Python", "SQL"],
   },
   {
     label: "Frontend",
     icon: "◈",
     color: { bg: "rgba(192,132,252,0.08)", border: "rgba(192,132,252,0.2)", accent: "rgba(216,180,254,0.85)", dot: "#c084fc", chipBg: "rgba(192,132,252,0.1)", chipBorder: "rgba(192,132,252,0.22)", chipText: "rgba(216,180,254,0.8)" },
-    items: [ "HTML", "CSS" , "React", "Next.js", "Tailwind", "ShadecnUI"],
+    items: ["React.js", "Next.js 14", "Tailwind CSS", "ShadcnUI", "HTML", "CSS"],
   },
   {
     label: "Backend",
     icon: "⌥",
     color: { bg: "rgba(34,211,238,0.07)", border: "rgba(34,211,238,0.18)", accent: "rgba(103,232,249,0.85)", dot: "#22d3ee", chipBg: "rgba(34,211,238,0.08)", chipBorder: "rgba(34,211,238,0.2)", chipText: "rgba(103,232,249,0.8)" },
-    items: ["Node.js", "Express",  "REST APIs" , "FastAPI"],
+    items: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
   },
   {
     label: "Databases",
     icon: "◉",
     color: { bg: "rgba(52,211,153,0.07)", border: "rgba(52,211,153,0.18)", accent: "rgba(110,231,183,0.85)", dot: "#34d399", chipBg: "rgba(52,211,153,0.08)", chipBorder: "rgba(52,211,153,0.2)", chipText: "rgba(110,231,183,0.8)" },
-    items: ["MongoDB", "PostgreSQL", "Prisma ORM"],
+    items: ["MongoDB", "PostgreSQL", "Firebase", "Firestore", "Prisma ORM"],
   },
   {
-    label: "GenAI And Computer Vision",
+    label: "AI and Machine Learning",
     icon: "✦",
     color: { bg: "rgba(251,146,60,0.07)", border: "rgba(251,146,60,0.2)", accent: "rgba(253,186,116,0.85)", dot: "#fb923c", chipBg: "rgba(251,146,60,0.09)", chipBorder: "rgba(251,146,60,0.22)", chipText: "rgba(253,186,116,0.85)" },
-    items: ["Generative AI", "Python based AI Services", "Mediapipe", "FaceAPI.js"],
-  },
-
-  {
-    label: "Authetication and Services",
-    icon: "✦",
-    color: { bg: "rgba(251,146,60,0.07)", border: "rgba(251,146,60,0.2)", accent: "rgba(253,186,116,0.85)", dot: "#fb923c", chipBg: "rgba(251,146,60,0.09)", chipBorder: "rgba(251,146,60,0.22)", chipText: "rgba(253,186,116,0.85)" },
-    items: ["Clerk", "NextAuth.js", "Resend"],
-  },
-  {
-    label: "Tools",
-    icon: "⚙",
-    color: { bg: "rgba(244,114,182,0.07)", border: "rgba(244,114,182,0.18)", accent: "rgba(249,168,212,0.85)", dot: "#f472b6", chipBg: "rgba(244,114,182,0.08)", chipBorder: "rgba(244,114,182,0.2)", chipText: "rgba(249,168,212,0.8)" },
-    items: ["Git", "GitHub", "Vercel", "Postman", "Render"],
-  },
+    items: ["LangChain", "LangGraph", "LangSmith", "Scikit-Learn", "PyTorch", "RAG"],
+  }
 ];
 
 export default function Skills() {
@@ -69,13 +56,13 @@ export default function Skills() {
         .skills-heading {
           font-family: 'Playfair Display', Georgia, serif;
           font-size: clamp(2.6rem, 5vw, 4.2rem);
-          font-weight: 700;
-          line-height: 1.06;
-          color: rgba(255,255,255,0.9);
+          font-weight: 600;
+          line-height: 1.1;
+          color: rgba(255,255,255,0.96);
         }
         .skills-heading em {
           font-style: italic;
-          background: linear-gradient(110deg, #c084fc 0%, #818cf8 50%, #38bdf8 100%);
+          background: linear-gradient(110deg, #e2b0ff 0%, #9f8cf8 50%, #5bd2f0 100%);
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -100,64 +87,77 @@ export default function Skills() {
         }
 
         .skill-group-card {
-          border-radius: 18px;
-          padding: 22px 24px;
-          transition: transform 0.25s ease;
+          border-radius: 20px;
+          padding: 28px;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          display: flex;
+          flex-direction: column;
+          height: 100%;
         }
-        .skill-group-card:hover { transform: translateY(-3px); }
+        .skill-group-card:hover {
+          transform: translateY(-6px) scale(1.02);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+          background: rgba(255, 255, 255, 0.04);
+        }
 
         .group-header {
           display: flex;
           align-items: center;
-          gap: 10px;
-          margin-bottom: 16px;
+          gap: 12px;
+          margin-bottom: 20px;
         }
 
         .group-icon {
           font-family: 'DM Mono', monospace;
-          font-size: 13px;
+          font-size: 16px;
           font-weight: 400;
-          width: 28px;
-          height: 28px;
-          border-radius: 8px;
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .group-label {
-          font-family: 'DM Mono', monospace;
-          font-size: 9px;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          font-weight: 300;
+          font-family: 'Inter', sans-serif;
+          font-size: 1.1rem;
+          font-weight: 600;
+          letter-spacing: 0.02em;
         }
 
         .skill-chip {
-          font-family: 'DM Mono', monospace;
-          font-size: 11px;
-          font-weight: 300;
-          padding: 5px 13px;
-          border-radius: 20px;
-          letter-spacing: 0.04em;
-          transition: transform 0.18s ease, box-shadow 0.18s ease;
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          padding: 8px 16px;
+          border-radius: 12px;
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
           cursor: default;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .skill-chip:hover {
-          transform: translateY(-2px);
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+          filter: brightness(1.2);
         }
 
         .skills-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
+          gap: 24px;
         }
-        @media (max-width: 768px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 480px) { .skills-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .skills-grid { grid-template-columns: 1fr; } }
       `}</style>
 
-      <section id="skills" ref={ref} className="relative py-36">
+      <section id="skills" ref={ref} className="relative py-20">
 
         {/* bg glows */}
         <div className="absolute pointer-events-none" style={{ top: '5%', right: '8%', width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(192,132,252,0.05) 0%, transparent 70%)' }} />

@@ -1,23 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Mono:wght@300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #0C0C0F;
+  background-color: #050505;
   color: #E8E6F0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #0C0C0F; }
-::-webkit-scrollbar-thumb { background: #2D2B3D; border-radius: 3px; }
+/* Elegant Mesh Gradient Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(129, 140, 248, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(192, 132, 252, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+  filter: blur(60px);
+  animation: bg-shift 15s ease-in-out infinite alternate;
+}
+
+@keyframes bg-shift {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #070709; }
+::-webkit-scrollbar-thumb { background: #232233; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #3c3a52; }
 
 .gradient-text {
-  background: linear-gradient(120deg, #C084FC, #818CF8);
+  background: linear-gradient(135deg, #E2B0FF, #9F8CF8, #5BD2F0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -25,8 +47,8 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.visible {
   opacity: 1;

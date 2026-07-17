@@ -36,7 +36,7 @@ export default function Contact() {
     },
     {
       label: 'Resume',
-      href: '/resume.pdf',
+      href: 'https://drive.google.com/file/d/1nb4IuOqbjbDuTCHGupml3ZS1nL4sSBsT/view?usp=drivesdk',
       color: 'rgba(253,186,116,0.75)',
       bg: 'rgba(251,146,60,0.07)',
       border: 'rgba(251,146,60,0.18)',
@@ -54,13 +54,13 @@ export default function Contact() {
         .contact-heading {
           font-family: 'Playfair Display', Georgia, serif;
           font-size: clamp(2.6rem, 5vw, 4.2rem);
-          font-weight: 700;
-          line-height: 1.06;
-          color: rgba(255,255,255,0.9);
+          font-weight: 600;
+          line-height: 1.1;
+          color: rgba(255,255,255,0.96);
         }
         .contact-heading em {
           font-style: italic;
-          background: linear-gradient(110deg, #c084fc 0%, #818cf8 50%, #38bdf8 100%);
+          background: linear-gradient(110deg, #e2b0ff 0%, #9f8cf8 50%, #5bd2f0 100%);
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -87,20 +87,23 @@ export default function Contact() {
         .email-btn {
           display: flex;
           align-items: center;
-          gap: 14px;
-          padding: 18px 24px;
-          border-radius: 16px;
-          background: rgba(192,132,252,0.06);
-          border: 1px solid rgba(192,132,252,0.16);
+          gap: 16px;
+          padding: 20px 26px;
+          border-radius: 20px;
+          background: rgba(192,132,252,0.04);
+          border: 1px solid rgba(192,132,252,0.12);
           cursor: pointer;
-          transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
           width: 100%;
           text-align: left;
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
         }
         .email-btn:hover {
-          transform: translateY(-3px);
-          background: rgba(192,132,252,0.1);
-          border-color: rgba(192,132,252,0.28);
+          transform: translateY(-4px);
+          background: rgba(192,132,252,0.08);
+          border-color: rgba(192,132,252,0.25);
+          box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
 
         .email-icon {
@@ -140,15 +143,20 @@ export default function Contact() {
         }
 
         .social-card {
-          padding: 14px 20px;
-          border-radius: 14px;
+          padding: 16px 20px;
+          border-radius: 16px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           text-decoration: none;
-          transition: transform 0.2s ease;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
         }
-        .social-card:hover { transform: translateY(-3px); }
+        .social-card:hover { 
+          transform: translateY(-4px); 
+          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
 
         .social-label {
           font-family: 'DM Mono', monospace;
@@ -200,7 +208,7 @@ export default function Contact() {
         }
       `}</style>
 
-      <section id="contact" ref={ref} className="relative py-32">
+      <section id="contact" ref={ref} className="relative py-16">
 
         <div className="absolute pointer-events-none" style={{ bottom: '0%', left: '50%', transform: 'translateX(-50%)', width: 400, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(192,132,252,0.05) 0%, transparent 70%)' }} />
         <div className="absolute pointer-events-none" style={{ top: '10%', right: '8%', width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(34,211,238,0.04) 0%, transparent 70%)' }} />

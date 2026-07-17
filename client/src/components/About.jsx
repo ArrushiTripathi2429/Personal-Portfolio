@@ -56,13 +56,13 @@ export default function About() {
         .about-heading-main {
           font-family: 'Playfair Display', Georgia, serif;
           font-size: clamp(2.6rem, 5.5vw, 4.5rem);
-          font-weight: 700;
-          line-height: 1.06;
-          color: rgba(255,255,255,0.9);
+          font-weight: 600;
+          line-height: 1.1;
+          color: rgba(255,255,255,0.96);
         }
         .about-heading-main em {
           font-style: italic;
-          background: linear-gradient(110deg, #c084fc 0%, #818cf8 45%, #38bdf8 100%);
+          background: linear-gradient(110deg, #e2b0ff 0%, #9f8cf8 45%, #5bd2f0 100%);
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -89,16 +89,19 @@ export default function About() {
 
         /* Detail cards */
         .detail-card {
-          border-radius: 14px;
-          padding: 14px 18px;
+          border-radius: 16px;
+          padding: 16px 20px;
           display: flex;
           align-items: flex-start;
-          gap: 14px;
-          transition: transform 0.22s ease, box-shadow 0.22s ease;
+          gap: 16px;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
           cursor: default;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
         .detail-card:hover {
-          transform: translateX(5px);
+          transform: translateX(8px);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         .detail-dot {
@@ -143,14 +146,17 @@ export default function About() {
 
         /* Currently strip */
         .currently-strip {
-          border-radius: 14px;
+          border-radius: 18px;
           background: rgba(255,255,255,0.02);
-          border: 1px solid rgba(255,255,255,0.05);
-          padding: 20px 24px;
-          margin-top: 48px;
+          border: 1px solid rgba(255,255,255,0.06);
+          padding: 24px 28px;
+          margin-top: 56px;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 20px;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          box-shadow: 0 4px 30px rgba(0,0,0,0.1);
         }
         @media (max-width: 600px) { .currently-strip { grid-template-columns: 1fr; } }
 
@@ -176,7 +182,7 @@ export default function About() {
         }
       `}</style>
 
-      <section id="about" ref={ref} className="relative py-32" style={{ background: 'transparent' }}>
+      <section id="about" ref={ref} className="relative py-20" style={{ background: 'transparent' }}>
 
         {/* Subtle bg glows */}
         <div className="absolute pointer-events-none" style={{
@@ -205,18 +211,18 @@ export default function About() {
                 <em>learning in public.</em>
               </h2>
 
-              <p className="reveal text-sm font-light leading-[1.95]"
-                 style={{ color: 'text-white', transitionDelay: '0.1s', maxWidth: 400 }}>
+              <p className="reveal text-[15px] font-light leading-relaxed"
+                 style={{ color: 'rgba(255,255,255,0.7)', transitionDelay: '0.1s', maxWidth: 420 }}>
                 I'm a second-year CS + AI student who enjoys building things
                 end-to-end — from designing APIs to writing clean React UIs.
                 I care about code that's readable, products that feel intentional,
                 and designs that don't get in the way.
               </p>
 
-              <p className="reveal text-sm font-light leading-[1.95]"
-                 style={{ color: 'text-white', transitionDelay: '0.15s', maxWidth: 400 }}>
+              <p className="reveal text-[15px] font-light leading-relaxed"
+                 style={{ color: 'rgba(255,255,255,0.7)', transitionDelay: '0.15s', maxWidth: 420 }}>
                 Right now I'm diving deep into{' '}
-                <span style={{ color: 'text-white' }}>Generative AI</span>
+                <span className="text-white font-medium">Generative AI</span>
                 {' '}— how LLMs can be woven into real products. I work across
                 Java, Python, and JavaScript depending on what the problem needs.
               </p>
